@@ -1,0 +1,30 @@
+{
+    "name": "idea-forest",
+    "version": "1.0.0",
+    "description": "Sell your idea and earn",
+    "main": "app.js",
+    "scripts": {
+        "test": "echo \"Error: no test specified\" && exit 1"
+    },
+    "keywords": [
+        "freelance",
+        "earning",
+        "selling",
+        "idea",
+        "knowledge"
+    ],
+    "author": "webcoded",
+    "license": "ISC",
+    "dependencies": {
+        "body-parser": "^1.19.0",
+        "concurrently": "^5.2.0",
+        "cors": "^2.8.5",
+        "express": "^4.17.1",
+        "express-session": "^1.17.1",
+        "firebase-admin": "^8.9.2",
+        "mysql": "^2.18.1",
+        "node-input-validator": "^4.2.0",
+        "node-php-password": "^0.1.2",
+        "nodemailer": "^6.4.6"
+    }
+}
