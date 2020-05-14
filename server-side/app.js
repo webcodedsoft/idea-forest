@@ -1,18 +1,15 @@
 var express = require('express');
 
-
-var ejs = require('ejs');
 var path = require('path');
 var envConfig = require("./config/config");
 
-var defaultController = require('./controllers/defaultController');
+var AuthController = require('./controllers/AuthController');
+var ProfileController = require('./controllers/ProfileController');
 
 var app = express();
 
 
-defaultController(app);
-userController(app);
-
-
+AuthController(app);
+ProfileController(app);
 //Listen port
 app.listen(process.env.PORT);

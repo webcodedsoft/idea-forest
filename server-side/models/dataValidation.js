@@ -1,8 +1,6 @@
 var mysql = require('mysql');
 var Password = require("node-php-password");
 var envConfig = require("../config/config");
-var firebaseadmin = require("firebase-admin");
-
 
 var db_connect = mysql.createConnection({
     host: process.env.HOST,
@@ -39,7 +37,6 @@ module.exports = {
             general_response.push(user_response);
         });
 
-
         db_connect.query("SELECT Email FROM user_account where Email= " + db_connect.escape(data.email), function(err, result) {
             error = result.length > 0 ? true : false;
             message = result.length > 0 ? "Email already registered with another account!, Please Try Again" : "Valid";
@@ -51,10 +48,10 @@ module.exports = {
 
             general_response.push(email_response);
 
-            // console.log(general_response);
             return responsecallback(general_response);
-        });
 
+        });
+        //console.log(general_response);
 
 
     },
@@ -128,7 +125,7 @@ module.exports = {
     },
 
 
-    random_string: function random_string(length) {
+    Numeric: function Numeric(length) {
         var result = '';
         var characters = '012345678901234567890123456789';
         var charactersLength = characters.length;
@@ -138,7 +135,7 @@ module.exports = {
         return result;
     },
 
-    order_id_generator: function order_id_generator(length) {
+    AlphaNumeric: function AlphaNumeric(length) {
         var result = '';
         var characters = 'ABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789';
         var charactersLength = characters.length;

@@ -1,6 +1,6 @@
 {
     "development": {
-        "PORT": 2817,
+        "PORT": 8089,
         "HOST": "localhost",
         "USER": "root",
         "PASSWORD": "webcoded1",
